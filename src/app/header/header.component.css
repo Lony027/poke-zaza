@@ -1,12 +1,114 @@
-/* Header */
-header{
-    padding: 20px 0px;
-    text-align: center;
-    background-color: seagreen;
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body{
+   margin: 0;
 }
 
-header h1{
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 3px;
+.all{
+   background: #111;
+   width: 100%;
+   height: 100%;
+}
+
+#poke-name{
+   font-family: Arial, Helvetica, sans-serif;
+   text-transform: uppercase;
+}
+
+.image{
+   display: block;
+}
+
+h3{
+   display: inline-block;
+}
+
+a{
+   color: #111;
+   text-decoration: none;
+}
+
+img{
+   width: 80%;
+   padding-left: 10%;
+   padding-right: 10%;
+}
+
+.pokemon .grd-poke-img{
+   width: 300px;
+}
+
+ul{
+   margin-left: 20px;
+}
+
+li{
+   margin: 5px;
+}
+
+.stats{
+   display: inline-block;
+   width: 33%;
+}
+
+.abilities{
+   display: inline-block;
+   padding-bottom: 50px;
+   width: 33%;
+   height: 100%;
+}
+
+.pokemon{
+   display: inline-block;
+   width: 100%;
+   height: 100%;
+   margin-left: 510px;
+   color: whitesmoke;
+}
+
+.sidebar{
+   position: fixed;
+   width: 500px;
+   height: 100%;
+   background: #111;
+   padding-top: 50px;
+}
+
+
+.pokemon-grid{
+   width: 90%;
+   display: block;
+   grid-gap: 16px;
+   padding: 20px;
+   height: 1000px;
+   overflow-y: auto;
+}
+
+.pokemon-grid .box{
+   width: 100%;
+   height: 100px;
+   border: 1px solid gray;
+   border-radius: 15px;
+   display: inline-block;
+   text-align: center;
+   margin-bottom: 8px;
+   background-color: white;
+}
+
+.pokemon-grid .box img{
+   max-width: 100px;
+   display: block;
+   float: left;
+}
+
+.pokemon-grid .box:hover{
+   border: 2px solid yellow;
+   background-color: rgb(0, 0, 219);
+   color: yellow;
+}
+
+#barre{
+   width: 80%;
+   height: 30px;
+   margin: 40px;
 }

@@ -1,4 +1,62 @@
-<!-- Header -->
-<header>
-    <h1>PokeZaZa</h1>
-</header>
+<div class="all">
+    <div class="sidebar">
+        <div class="image">
+            <img src="assets/images/poke.png" alt="logo">
+        </div>
+        <input id="barre" placeholder="Pokemon's name" type="text" [(ngModel)]="term">
+        <!-- Pokemon Grid -->
+        <div class="pokemon-grid">
+            <div *ngFor = "let pokemon of pokemons | filter:term">
+                <a (click)="changeGrandPoke(pokemon)">
+                    <div class="box">
+                        <img [src]="pokemon.sprites.front_default" alt="pokemon image">
+                        <h3>{{ pokemon.name }}</h3>
+                        <p>
+                            <b>Type:</b> {{pokemon.types[0].type.name}}
+                        </p>
+                        <p>
+                            <b>Height:</b> {{pokemon.height}} in
+                        </p>
+                        <p>
+                            <b>Health:</b> {{pokemon.stats[0].base_stat}}
+                        </p>
+                        <p>
+                            <b>Attack Power:</b> {{pokemon.stats[1].base_stat}}
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </div> <!-- End Of Pokemon Grid --> 
+    </div>
+    <div class="pokemon">
+        <h1 id="poke-name">{{grandPokemon.name}}</h1>
+        <div class="images">
+            <img class="grd-poke-img" [src]="grandPokemon.sprites.front_default" alt="pokemon image">
+            <img class="grd-poke-img" [src]="grandPokemon.sprites.back_default" alt="pokemon image">
+        </div>
+        <h1 id="poke-name">{{grandPokemon.name}} shiny</h1>
+        <div class="images">
+            <img class="grd-poke-img" [src]="grandPokemon.sprites.front_shiny" alt="pokemon image">
+            <img class="grd-poke-img" [src]="grandPokemon.sprites.back_shiny" alt="pokemon image">
+        </div>
+        <div class="stats">
+            <h2>Stats : </h2>
+            <ul>
+                <li><h3>{{grandPokemon.stats[0].base_stat}} HP</h3></li>
+                <li><h3>{{grandPokemon.stats[1].base_stat}} ATK</h3></li>
+                <li><h3>{{grandPokemon.stats[2].base_stat}} DEF</h3></li>
+                <li><h3>{{grandPokemon.stats[3].base_stat}} SPE-ATK</h3></li>
+                <li><h3>{{grandPokemon.stats[4].base_stat}} SPE-DEF</h3></li>
+                <li><h3>{{grandPokemon.stats[5].base_stat}} SPEED</h3></li>
+            </ul>
+        </div>
+        <div class="abilities">
+            <h2>Abilities : </h2>
+            <ul>
+                <li><h3>{{grandPokemon.abilities[0].ability.name}}</h3></li>
+                <li><h3>{{grandPokemon.abilities[1].ability.name}}</h3></li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
